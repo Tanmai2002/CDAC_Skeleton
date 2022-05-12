@@ -5,8 +5,9 @@ using UnityEngine;
 public class BoneDragScript : MonoBehaviour
 {
     public enum bones{
-        Skull,Rib
-    }
+        Skull,RibCage,Femur_Left,Femur_Right,Clavical_Right, Clavical_Left,Fingers_Right, Fingers_Left,Humerous_Left, Humerous_Right,Ulna_Left, Ulna_Right, RibCenter,Foot_Left,Foot_Right,Pelvis,VertebrateColumn,Radius_Left, Radius_Right
+        }
+
 
 
 
