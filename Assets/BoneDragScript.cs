@@ -8,6 +8,8 @@ public class BoneDragScript : MonoBehaviour
         Skull,RibCage,Femur_Left,Femur_Right,Clavical_Right,Clavical_Left,Fingers_Right, Fingers_Left,Humerous_Left, Humerous_Right,Ulna_Left, Ulna_Right, Rib_Center,Foot_Left,Foot_Right,Pelvis, Vertebrate_Column,Radius_Left, Radius_Right
         }
     bool isFixed;
+    [SerializeField]
+    bool DebugMode=false;
 
 
 
@@ -28,7 +30,7 @@ public class BoneDragScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!choose && !isFixed){
+        if(!choose ){
                  myParent.position=Camera.main.ScreenToWorldPoint(Input.mousePosition+new Vector3(0,0,10));
        
         }
@@ -38,7 +40,7 @@ public class BoneDragScript : MonoBehaviour
     }
     void OnMouseDown(){
     Debug.Log("Sprite Clicked");
-    if(isFixed){
+    if(isFixed && !DebugMode){
         return;
     }
      if(choose){
