@@ -10,6 +10,8 @@ public class BoneDragScript : MonoBehaviour
     bool isFixed;
     [SerializeField]
     bool DebugMode=false;
+    
+    HaddiScript haddi;
 
 
 
@@ -25,6 +27,7 @@ public class BoneDragScript : MonoBehaviour
     {
         isFixed=false;
         initialPosition=transform.position;
+        haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
     }
 
     // Update is called once per frame
@@ -58,6 +61,7 @@ public class BoneDragScript : MonoBehaviour
                 isFixed=true;
             }else{
                 myParent.position=initialPosition;
+                haddi.values.Add("Please Try again");
             }
         }
 }
