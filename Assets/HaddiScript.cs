@@ -23,7 +23,7 @@ public class HaddiScript : MonoBehaviour
     void Start()
     {
         canGoNext=true;
-        renderer.sortingOrder=10;
+        renderer.sortingOrder=12;
         text.SetText("Hello Tanmai");
     }
 
