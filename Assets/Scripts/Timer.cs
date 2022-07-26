@@ -13,8 +13,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = startMinutes * 60;
-        timerActive = true;
+        currentTime = startMinutes * 60;      
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class Timer : MonoBehaviour
             if (currentTime <= 0)
             {
                 currentTime = 0;
-                timerActive = false;
+                
             }
             TimeSpan time = TimeSpan.FromSeconds(currentTime);
             currentTimeText.text = time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00");
@@ -34,11 +33,11 @@ public class Timer : MonoBehaviour
         
     }
 
-    // public void StartTimer(){
-        
-    // }
+    public void StartTimer(){
+        timerActive = true;
+    }
 
-    // public void StopTimer(){
-        
-    // }
+    public void StopTimer(){
+        timerActive = false;
+    }
 }
