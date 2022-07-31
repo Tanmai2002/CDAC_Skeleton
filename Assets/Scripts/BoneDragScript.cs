@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoneDragScript : MonoBehaviour
 {
     public enum bones{
-        Skull,RibCage,Femur_Left,Femur_Right,Clavical_Right,Clavical_Left,Fingers_Right, Fingers_Left,Humerous_Left, Humerous_Right,Ulna_Left, Ulna_Right, Rib_Center,Foot_Left,Foot_Right,Pelvis, Vertebrate_Column,Radius_Left, Radius_Right, Tibia_Left, Tibia_Right
+        Skull,RibCage,Femur_Left,Femur_Right,Clavical_Right,Clavical_Left,Fingers_Right, Fingers_Left,Humerous_Left, Humerous_Right,Ulna_Left, Ulna_Right, Rib_Center,Foot_Left,Foot_Right,Pelvis, Vertebrate_Column,Radius_Left, Radius_Right, Tibia_Left, Tibia_Right, Scapula_Left, Scapula_Right,Patella_Left, Patella_Right
         }
     bool isFixed;
     [SerializeField]

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1554534926879853828
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2442644102078683128, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: thisBone
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1421876
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777509369478723975, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996421485271705616, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_Name
+      value: ScapulaL_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582769011986961648, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45740622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582769011986961648, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45740622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582769011986961648, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45740622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582769011986961648, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582769011986961648, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338109506249136075, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3974666c092ba2d4aaeabf3bd982cd7c, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 030d893e7c27b8a49a278bc44627db5f, type: 3}
