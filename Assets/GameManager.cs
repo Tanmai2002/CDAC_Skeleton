@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     {
         bonePositions=new Dictionary<string, Transform>();
         foreach(Transform t in Holder.GetComponentsInChildren<Transform>()){
+            if(t.gameObject.name.ToString()=="Positioner")
+                continue;
             Debug.Log(t.gameObject.name.ToString().Equals("SkullPoint"));
             bonePositions.Add(t.gameObject.name.ToString(),t);
         }

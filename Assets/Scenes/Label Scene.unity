@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: c2d3c22f08c5a494f84de43dc690bb21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3245,6 +3245,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 71079363}
     m_Modifications:
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.237
+      objectReference: {fileID: 0}
     - target: {fileID: 7883481841085155246, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
       propertyPath: m_Name
       value: Ulna_LeftPoint
@@ -4659,6 +4667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: foreground
       objectReference: {fileID: 0}
+    - target: {fileID: 3214514139403908885, guid: 18cabd709faf08d419bdaf37246bae9d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3214514139403908887, guid: 18cabd709faf08d419bdaf37246bae9d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -4712,6 +4724,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 71079363}
     m_Modifications:
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.057
+      objectReference: {fileID: 0}
     - target: {fileID: 7883481841085155246, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
       propertyPath: m_Name
       value: PelvisPoint
@@ -4759,6 +4779,14 @@ PrefabInstance:
     - target: {fileID: 7883481841085155247, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199622670670657766, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199622670670657766, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.14034653
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
