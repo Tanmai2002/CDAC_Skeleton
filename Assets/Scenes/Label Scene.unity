@@ -3738,6 +3738,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 71079363}
     m_Modifications:
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4856753570068535244, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.36
+      objectReference: {fileID: 0}
     - target: {fileID: 7883481841085155246, guid: 0b50035417bfb8a42a036d91cb27c94f, type: 3}
       propertyPath: m_Name
       value: Humerous_LeftPoint
