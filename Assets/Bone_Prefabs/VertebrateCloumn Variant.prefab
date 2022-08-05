@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: thisBone
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 3753339493761584839, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.59375
+      objectReference: {fileID: 0}
     - target: {fileID: 5453889973732267173, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_Name
       value: VertebrateCloumn Variant
@@ -18,6 +22,14 @@ PrefabInstance:
     - target: {fileID: 5524748661721826610, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524748661721826610, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524748661721826610, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.02041
       objectReference: {fileID: 0}
     - target: {fileID: 5524748661721826610, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,11 +73,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6177944032110520389, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0415626
+      value: 0.6376112
       objectReference: {fileID: 0}
     - target: {fileID: 6177944032110520389, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.99687505
+      value: 0.7957499
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177944032110520389, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.323225
       objectReference: {fileID: 0}
     - target: {fileID: 6177944032110520389, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_LocalPosition.x

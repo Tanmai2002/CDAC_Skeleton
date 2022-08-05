@@ -38,6 +38,8 @@ public class BonePlacement : MonoBehaviour
     }
 
     public void next(){
+         current.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+         current=null;
         state = true;
     }
 
