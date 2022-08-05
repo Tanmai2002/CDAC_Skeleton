@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Label Scene.unity
     guid: a609283522491ab4b9f91d44c1ce34c1
+  - enabled: 1
+    path: Assets/Scenes/Game 3.unity
+    guid: 414446be83bc9754f9be389c787ea091
   m_configObjects: {}
