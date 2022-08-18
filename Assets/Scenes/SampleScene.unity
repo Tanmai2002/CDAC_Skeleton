@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1151,15 +1151,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3143728334113195263, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
       propertyPath: values.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3143728334113195263, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
       propertyPath: values.Array.data[0]
-      value: Please Try again
+      value: Hi! I'm Haddi, I'm here to help you!
       objectReference: {fileID: 0}
     - target: {fileID: 3143728334113195263, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
       propertyPath: values.Array.data[1]
-      value: Hi! How are you?
+      value: Try to place the bones in their correct position
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143728334113195263, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
+      propertyPath: values.Array.data[2]
+      value: Try to finish as soon as possible.. the clock is ticking!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143728334113195263, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
+      propertyPath: values.Array.data[3]
+      value: Don't worry if you go wrong , I will always be there to help you if
+        you get stuck
       objectReference: {fileID: 0}
     - target: {fileID: 7017416912237569447, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
       propertyPath: m_fontColor.b

@@ -13,8 +13,33 @@ public class BoneDragScript : MonoBehaviour
     
     HaddiScript haddi;
 
-
-
+    Dictionary < string, string > boneHints = new Dictionary < string, string > (){
+        {"Pelvis", "Basin-shaped complex of bones that connects the trunk and the legs"},
+        {"Ulna_Right","A long bone found in the forearm that stretches from the elbow to the smallest finger"},
+        {"Ulna_Left","A long bone found in the forearm that stretches from the elbow to the smallest finger"},
+        {"Skull","Bones that surround and protect the brain"},
+        {"Tibia_Left","Bone which connects the knee with the ankle bones"},
+        {"Tibia_Right","Bone which connects the knee with the ankle bones"},
+        {"Patella_Left","Sits in front of the knee joint and protects the joint from damage"},
+        {"Patella_Right","Sits in front of the knee joint and protects the joint from damage"},
+        {"Scapula_Left","A large triangular-shaped bone that suppoprts shoulder movement"},
+        {"Scapula_Right","A large triangular-shaped bone that suppoprts shoulder movement"},
+        {"Femur_Left","Thigh Bone which is longest, heaviest, and strongest bone in the human body"},
+        {"Femur_Right","Thigh Bone which is longest, heaviest, and strongest bone in the human body"},
+        {"Clavical_Left","Long, thin, slightly curved bone that connects your arm to your body"},
+        {"Clavical_Right","Long, thin, slightly curved bone that connects your arm to your body"},
+        {"Fingers_Right","Small bones that connect the hand to the wrist"},
+        {"Fingers_Left","Small bones that connect the hand to the wrist"},
+        {"Humerous_Left","The bone in your upper arm that's located between your elbow and your shoulder"},
+        {"Humerous_Right","The bone in your upper arm that's located between your elbow and your shoulder"},
+        {"Radius_Left","The outer of the two bones of the forearm"},
+        {"Radius_Right","The outer of the two bones of the forearm"},
+        {"Vertebrate_Column","Known as Backbone or Spine"},
+        {"Rib_Center","Partially T-shaped vertical bone that forms the anterior portion of the chest wall centrally"},
+        {"Rib_Cage","Surrounds the lungs and the heart, serving as an important means of bony protection for these vital organs"},
+        {"Foot_Left","Human foot consists of 26 bones that connect the foot to the leg"},
+        {"Foot_Right","Human foot consists of 26 bones that connect the foot to the leg"}
+    };
 
 
     [SerializeField]
@@ -36,11 +61,10 @@ public class BoneDragScript : MonoBehaviour
         if(!choose ){
                  myParent.position=Camera.main.ScreenToWorldPoint(Input.mousePosition+new Vector3(0,0,10));
        
-        }
-       
-
-        
+        }   
     }
+
+
     void OnMouseDown(){
     Debug.Log("Sprite Clicked");
     if(isFixed && !DebugMode){
@@ -61,7 +85,7 @@ public class BoneDragScript : MonoBehaviour
                 isFixed=true;
             }else{
                 myParent.position=initialPosition;
-                haddi.values.Add("Please Try again");
+                haddi.values.Add(boneHints[thisBone.ToString()]);
             }
         }
 }
