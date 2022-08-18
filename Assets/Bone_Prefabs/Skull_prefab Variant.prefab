@@ -15,13 +15,21 @@ PrefabInstance:
       propertyPath: thisBone
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3753339493761584839, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753339493761584839, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 5453889973732267173, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_Name
       value: Skull_prefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5462687517497962590, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_Radius
-      value: 1.47
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 5524748661721826610, guid: 72494ac470ec1ae43a8d846533e8de60, type: 3}
       propertyPath: m_RootOrder
