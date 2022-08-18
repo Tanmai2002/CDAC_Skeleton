@@ -19,11 +19,11 @@ public class LabelLineScript : MonoBehaviour
         float y1=this.transform.position.y;
         
         line.SetPosition(0,new Vector3(x1,y1,0));
-        line.SetPosition(1,new Vector3((x1+x2)/2,y1,0));
+        // line.SetPosition(1,new Vector3((x1+x2)/2,y1,0));
         
-        line.SetPosition(2,new Vector3((x1+x2)/2,y2,0));
+        // line.SetPosition(2,new Vector3((x1+x2)/2,y2,0));
         
-        line.SetPosition(3,new Vector3(x2,y2,0));
+        line.SetPosition(1,new Vector3(x2,y2,0));
         line.sortingOrder=-3;
         line.startColor=new Color(0,0,0);
         line.endColor=new Color(0,0,0);
