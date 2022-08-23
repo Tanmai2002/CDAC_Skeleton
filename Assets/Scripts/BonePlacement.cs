@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class BonePlacement : MonoBehaviour
@@ -13,6 +14,8 @@ public class BonePlacement : MonoBehaviour
     public GameObject silouette;
     private GameObject current;
     private bool state = true;
+    public Text currentBoneName;
+    private string []boneName = {"Skull","Rib Cage","Femur Left","Femur Right","Clavical Left","Clavical Right","Finger Left","Finger Right","Foot Right","Foot Left","Humerus Right","Humerus Left","Sternum","Ulna Left","Ulna Right","Vertebrate Column","Pelvis","Tibia Right","Tibia Left","Scapula Left","Scapula Right","Patella Left","Patella Right"};
     
         
 
@@ -48,6 +51,7 @@ public class BonePlacement : MonoBehaviour
             int r = GetRandomNumber(0,boneClone.Length);
             current = boneClone[r];
             current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            currentBoneName.text = boneName[r];
             state=false;
         }
     }

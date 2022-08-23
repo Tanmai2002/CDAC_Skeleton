@@ -18,12 +18,17 @@ public class HaddiScript : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
+    Timer myTimer;
+
     bool canGoNext;
+    bool isFirstTime = true;
     Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
+        myTimer = FindObjectOfType<Timer>().GetComponent<Timer>();
+
         animator=GetComponent<Animator>();
         canGoNext=true;
         renderer.sortingOrder=12;
@@ -51,7 +56,10 @@ public class HaddiScript : MonoBehaviour
         
         if(values.Count<=0){
             Invoke("MakeItZero",0.5f);
-
+            if(isFirstTime){
+                myTimer.StartTimer();
+                isFirstTime=false;
+            }
             
             return;
         }
@@ -69,6 +77,10 @@ public class HaddiScript : MonoBehaviour
             values.RemoveAt(0);
             animator.SetBool("textExit",true);
             if(values.Count<=0){
+            if(isFirstTime){
+                myTimer.StartTimer();
+                isFirstTime=false;
+            }
                 
             Invoke("MakeItZero",0.5f);
                 
