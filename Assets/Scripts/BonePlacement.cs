@@ -14,10 +14,12 @@ public class BonePlacement : MonoBehaviour
     public GameObject silouette;
     private GameObject current;
     private bool state = true;
+
+    public QuizManager quizM;
+
     public Text currentBoneName;
-    private string []boneName = {"Skull","Rib Cage","Femur Left","Femur Right","Clavical Left","Clavical Right","Finger Left","Finger Right","Foot Right","Foot Left","Humerus Right","Humerus Left","Sternum","Ulna Left","Ulna Right","Vertebrate Column","Pelvis","Tibia Right","Tibia Left","Scapula Left","Scapula Right","Patella Left","Patella Right"};
+    private string []boneName = {"Skull","RibCage","Femur","Femur","Clavical","Clavical","Finger","Finger","Foot","Foot","Humerus","Humerus","Sternum","Ulna","Ulna","Vertebrate","Pelvis","Tibia","Tibia","Scapula","Scapula","Patella","Patella"};
     
-        
 
     void Start()
     {
@@ -52,7 +54,9 @@ public class BonePlacement : MonoBehaviour
             current = boneClone[r];
             current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             currentBoneName.text = boneName[r];
+            quizM.question.answer = boneName[r];
+            quizM.SetQuestion();
             state=false;
         }
-    }
+    } 
 }
