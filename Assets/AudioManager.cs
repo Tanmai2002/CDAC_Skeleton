@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
     public static AudioManager instance;
+    Sounds currentSound;
 
     void Awake()
     {
@@ -35,7 +36,7 @@ public class AudioManager : MonoBehaviour
 
         void Start()
         {
-            int soundIndex = 0;
+            
             Play(sounds[SoundIndex].name);
 
         }
@@ -43,12 +44,23 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
+        if(currentSound!=null){
+            
+        }
         Sounds s = Array.Find(sounds, sound => sound.name == name);
+        currentSound=s;
         s.source.Play();
     }
-    public void Stop(string name)
-    {
-        Sounds s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Stop();
+
+    public void pause(){
+        currentSound.source.Pause();
     }
+    public void resume(){
+             currentSound.source.UnPause();
+    }
+
+    void stopCurrent(){
+        currentSound.source.Stop();
+    }
+  
 }

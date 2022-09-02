@@ -23,12 +23,15 @@ public class HaddiScript : MonoBehaviour
     bool canGoNext;
     bool isFirstTime = true;
     Animator animator;
+
+[SerializeField]
+    AudioManager aumanager;
     
     // Start is called before the first frame update
     void Start()
     {
         myTimer = FindObjectOfType<Timer>().GetComponent<Timer>();
-
+        aumanager=FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
         animator=GetComponent<Animator>();
         canGoNext=true;
         renderer.sortingOrder=12;
@@ -49,13 +52,14 @@ public class HaddiScript : MonoBehaviour
             textfield.SetActive(false);
 
    }
-    void FixedUpdate()
+    void Update()
     {
         
         animator.SetInteger("dialogCount",values.Count);
         
         if(values.Count<=0){
             Invoke("MakeItZero",0.5f);
+            aumanager.resume();
             if(isFirstTime){
                 myTimer.StartTimer();
                 isFirstTime=false;
@@ -64,6 +68,9 @@ public class HaddiScript : MonoBehaviour
             return;
         }
         if(values.Count>0 && spriteRenderer.enabled==false){
+            if(aumanager!=null){
+                aumanager.pause();
+            }
 
             text.SetText(values[0]);
             spriteRenderer.enabled=true;
