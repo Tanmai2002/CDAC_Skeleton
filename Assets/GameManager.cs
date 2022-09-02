@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
                 continue;
             Debug.Log(t.gameObject.name.ToString().Equals("SkullPoint"));
             bonePositions.Add(t.gameObject.name.ToString(),t);
+            // FindObjectOfType<AudioManager>().Play(Sounds[SoundIn]].name);
         }
     }
 
