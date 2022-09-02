@@ -41,31 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1290813381018002811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd541ec752874954c8f05a58bcfe9f07, type: 3}
+  m_Script: {fileID: 11500000, guid: 24965f468e53ec1448d85db86b5208c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: aud1
-    clip: {fileID: 8300000, guid: 465d23d4da04ba346a439fbb5a13c5b7, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: aud2
-    clip: {fileID: 8300000, guid: 7120349760a4fb943b226e257160a61d, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: aud3
-    clip: {fileID: 8300000, guid: 7ac43bdf1e3378a4890c57fb22dd8bb8, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: aud4
-    clip: {fileID: 8300000, guid: 41903cb8a3e100b458b77c5cb185491d, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
+  sounds: []
+  SoundIndex: 0

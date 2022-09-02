@@ -78,7 +78,7 @@ public class BoneDragScript : MonoBehaviour
             choose=true;
             drop=false;
             Debug.Log(thisBone+"Point");
-            Vector3 finalPos=FindObjectOfType<GameManager>().GetBonePos(thisBone+"Point");
+            Vector3 finalPos=FindObjectOfType<SceneBonePosManager>().GetBonePos(thisBone+"Point");
             Debug.Log(Vector3.Distance(transform.position,finalPos));
             if(Vector3.Distance(transform.position,finalPos)<0.5){
                 myParent.position=finalPos;

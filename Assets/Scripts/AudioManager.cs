@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sounds[] sounds;
     public static AudioManager instance;
-    Sounds currentSound;
+    Sounds currentSound,forgroundMusic;
 
     void Awake()
     {
@@ -44,13 +44,38 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        if(currentSound!=null){
-            
-        }
+       
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         currentSound=s;
         s.source.Play();
     }
+
+    public void playForeground(string name){
+        lowerMainVolume();
+        Sounds s = Array.Find(sounds, sound => sound.name == name);
+        forgroundMusic=s;
+        s.source.Play();
+
+
+    }
+
+    public void stopForeground(){
+        if(forgroundMusic==null)
+        return;
+        normalizeMainVolume();
+        forgroundMusic.source.Stop();
+        forgroundMusic=null;
+        
+
+    }
+     void lowerMainVolume(){
+        currentSound.source.volume=0.3f;
+    }
+
+     void normalizeMainVolume(){
+        currentSound.source.volume=1f;
+    }
+
 
     public void pause(){
         currentSound.source.Pause();

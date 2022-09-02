@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class SceneBonePosManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]

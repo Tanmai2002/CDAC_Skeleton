@@ -59,7 +59,7 @@ public class HaddiScript : MonoBehaviour
         
         if(values.Count<=0){
             Invoke("MakeItZero",0.5f);
-            aumanager.resume();
+            aumanager.stopForeground();
             if(isFirstTime){
                 myTimer.StartTimer();
                 isFirstTime=false;
@@ -69,7 +69,7 @@ public class HaddiScript : MonoBehaviour
         }
         if(values.Count>0 && spriteRenderer.enabled==false){
             if(aumanager!=null){
-                aumanager.pause();
+                aumanager.playForeground("haddi1");
             }
 
             text.SetText(values[0]);
