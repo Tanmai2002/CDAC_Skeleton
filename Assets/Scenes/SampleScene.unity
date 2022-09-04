@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 60315013}
   - component: {fileID: 60315012}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SceneGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb5ff711852fed41b031fdbbda67e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMinutes: 2
+  startMinutes: 5
   currentTimeText: {fileID: 1705466088}
 --- !u!1 &2105372983
 GameObject:
@@ -2038,7 +2038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3144341785911901038, guid: fa2bb994bde9e3e41ae43c771f3bb197, type: 3}
       propertyPath: m_Name
-      value: silouette
+      value: Positioner
       objectReference: {fileID: 0}
     - target: {fileID: 5108519526886134006, guid: fa2bb994bde9e3e41ae43c771f3bb197, type: 3}
       propertyPath: m_Name

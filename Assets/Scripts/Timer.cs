@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     float currentTime;
     public int startMinutes;
     public Text currentTimeText;
+
+    bool TimerEnded=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,12 @@ public class Timer : MonoBehaviour
             currentTime -= Time.deltaTime;
             if (currentTime <= 0)
             {
+                if(TimerEnded){
+                    TimerEnded=false;
+                    GameManager.instance.timerEnded();
+                    
+
+                }
                 currentTime = 0;
                 
             }

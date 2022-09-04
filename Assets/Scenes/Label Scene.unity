@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71079363}
   m_Layer: 0
-  m_Name: Label Holder
+  m_Name: Positioner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

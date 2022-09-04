@@ -36,7 +36,7 @@ public class BoneDragScript : MonoBehaviour
         {"Radius_Right","The outer of the two bones of the forearm"},
         {"Vertebrate_Column","Known as Backbone or Spine"},
         {"Rib_Center","Partially T-shaped vertical bone that forms the anterior portion of the chest wall centrally"},
-        {"Rib_Cage","Surrounds the lungs and the heart, serving as an important means of bony protection for these vital organs"},
+        {"RibCage","Surrounds the lungs and the heart, serving as an important means of bony protection for these vital organs"},
         {"Foot_Left","Human foot consists of 26 bones that connect the foot to the leg"},
         {"Foot_Right","Human foot consists of 26 bones that connect the foot to the leg"}
     };
@@ -47,11 +47,13 @@ public class BoneDragScript : MonoBehaviour
     [SerializeField]
     bones thisBone;
     bool choose=true,drop=false;
+    SceneBonePosManager bonePosManager;
     Vector3 initialPosition;
     void Start()
     {
         isFixed=false;
         initialPosition=transform.position;
+        bonePosManager=FindObjectOfType<SceneBonePosManager>().GetComponent<SceneBonePosManager>();
         haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
     }
 
@@ -78,10 +80,12 @@ public class BoneDragScript : MonoBehaviour
             choose=true;
             drop=false;
             Debug.Log(thisBone+"Point");
-            Vector3 finalPos=FindObjectOfType<SceneBonePosManager>().GetBonePos(thisBone+"Point");
-            Debug.Log(Vector3.Distance(transform.position,finalPos));
+            Vector3 finalPos=bonePosManager.GetBonePos(thisBone+"Point");
+            // Debug.Log(Vector3.Distance(transform.position,finalPos));
             if(Vector3.Distance(transform.position,finalPos)<0.5){
                 myParent.position=finalPos;
+                bonePosManager.checkIfGameComplete();
+                
                 isFixed=true;
             }else{
                 myParent.position=initialPosition;
