@@ -7,9 +7,10 @@ public class HaddiScript : MonoBehaviour
 {
     [SerializeField]
     MeshRenderer renderer;
+    TextAnimator textanim;
 
-    [SerializeField]
-    TextMeshPro text;
+    // [SerializeField]
+    // TextMeshPro text;
     [SerializeField]
     public List<string> values;
 
@@ -30,22 +31,26 @@ public class HaddiScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        textanim=GetComponent<TextAnimator>();
         myTimer = FindObjectOfType<Timer>().GetComponent<Timer>();
         aumanager=FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
         animator=GetComponent<Animator>();
         canGoNext=true;
+    
         renderer.sortingOrder=12;
-        text.SetText("Hello Tanmai");
+        // text.SetText("Hello Tanmai");
         animator.SetInteger("dialogCount",values.Count);
     }
 
-   void resetCanGo(){
-    canGoNext=true;
-   }
+//    void resetCanGo(){
+//     canGoNext=true;
+//    }
    void setFalseTextExit(){
             animator.SetBool("textExit",false);
+            textanim.addTextToAnimate(values[0]);
+
             
-                text.SetText(values[0]);
+                // text.SetText(values[0]);
    }
    void MakeItZero(){
     spriteRenderer.enabled=false;
@@ -54,6 +59,9 @@ public class HaddiScript : MonoBehaviour
    }
     void Update()
     {
+        if(textanim.completed){
+            canGoNext=true;
+        }
         
         animator.SetInteger("dialogCount",values.Count);
         
@@ -71,13 +79,13 @@ public class HaddiScript : MonoBehaviour
             if(aumanager!=null){
                 aumanager.playForeground("haddi1");
             }
-
-            text.SetText(values[0]);
+            textanim.addTextToAnimate(values[0]);
+            // text.SetText(values[0]);
             spriteRenderer.enabled=true;
             textfield.SetActive(true);
             canGoNext=false;
             
-                Invoke("resetCanGo",1);
+                // Invoke("resetCanGo",1);
         }
 
         if(canGoNext && Input.GetMouseButtonDown(0)){
@@ -98,7 +106,7 @@ public class HaddiScript : MonoBehaviour
                 
                 Invoke("setFalseTextExit",0.2f);
                 canGoNext=false;
-                Invoke("resetCanGo",1);
+                // Invoke("resetCanGo",1);
                 
             }
 

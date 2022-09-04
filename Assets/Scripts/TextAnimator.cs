@@ -7,7 +7,7 @@ public class TextAnimator : MonoBehaviour
     [SerializeField]
     float delayTime;
     [SerializeField]
-   TextMeshProUGUI mytext;
+   TextMeshPro mytext;
    [SerializeField]
     string textToDisplay;
     [SerializeField]
@@ -17,13 +17,18 @@ public class TextAnimator : MonoBehaviour
     string[] terms;
     char[] terms1;
     bool next=true;
+    [SerializeField]
+    int fontSize=10;
+    [SerializeField]
+    TMP_FontAsset f;
     public bool completed=false;
     int i=0;
 
     // Start is called before the first frame update
     void Start()
     {
-        mytext.text="";
+        mytext.SetText("");
+        mytext.font=f;
     
         terms=textToDisplay.Split(" ");
         if(onLetter){
@@ -41,6 +46,8 @@ public class TextAnimator : MonoBehaviour
     void FixedUpdate()
     {
 
+        
+        mytext.fontSize=fontSize;
 if(next ){
     if(onLetter){
         if(i>=terms1.Length){
@@ -56,11 +63,27 @@ if(next ){
         }
         currText+=" "+terms[i];
     }
-    mytext.text=currText;
+    mytext.SetText(currText);
         i++;
         next=false;
         Invoke("addTextNewText",delayTime);
 }
+        
+    }
+
+    public void addTextToAnimate(string text){
+        textToDisplay=text;
+        
+        currText="";
+        mytext.SetText("");
+    
+        terms=textToDisplay.Split(" ");
+        if(onLetter){
+            terms1=textToDisplay.ToCharArray();
+        }
+        i=0;
+        next=true;
+        completed=false;
         
     }
 

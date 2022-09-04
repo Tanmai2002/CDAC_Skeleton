@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 9109136359113495306}
   - component: {fileID: 3143728334113195263}
   - component: {fileID: 7674733861437883558}
+  - component: {fileID: 5244675784466739507}
   m_Layer: 0
   m_Name: Haddi
   m_TagString: Untagged
@@ -357,10 +358,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 2800397005498265793}
-  text: {fileID: 7017416912237569447}
   values: []
   textfield: {fileID: 1388719794376764848}
   spriteRenderer: {fileID: 9109136359113495306}
+  aumanager: {fileID: 0}
 --- !u!95 &7674733861437883558
 Animator:
   serializedVersion: 4
@@ -381,3 +382,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5244675784466739507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9109136359113495307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44fb5e4b038956d46832ed91676da371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.05
+  mytext: {fileID: 7017416912237569447}
+  textToDisplay: 
+  onLetter: 1
+  terms: []
+  fontSize: 2
+  f: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  completed: 0
