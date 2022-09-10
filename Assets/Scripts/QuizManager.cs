@@ -90,7 +90,7 @@ public class QuizManager : MonoBehaviour
 
             if(correctAnswer){
                 Debug.Log("Correct Answer");
-                bonePlacement.next();
+                bonePlacement.correctAnswer();
             }
             else {
                 Debug.Log("Wrong Answer");

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
+using System.Linq;
+
 
 public class BonePlacement : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class BonePlacement : MonoBehaviour
 
     public Text currentBoneName;
     private string []boneName = {"Skull","RibCage","Femur","Femur","Clavical","Clavical","Finger","Finger","Foot","Foot","Humerus","Humerus","Sternum","Ulna","Ulna","Vertebrate","Pelvis","Tibia","Tibia","Scapula","Scapula","Patella","Patella"};
+
+    private int []left = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22};
+
+    private int []done = {};
+
+    private int currentIndex;
     
 
     void Start()
@@ -48,9 +56,27 @@ public class BonePlacement : MonoBehaviour
         state = true;
     }
 
+    public void correctAnswer(){
+        current.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+         current=null;
+        state = true;
+        makeDone();
+    }
+
+    public void makeDone(){
+        done = done.Concat(new int[] {currentIndex}).ToArray();
+        left = left.Where(val => val != currentIndex).ToArray();
+
+        boneClone[currentIndex].GetComponentInChildren<SpriteRenderer>().color = Color.green;
+
+    }
+
     void Update(){
         if(state){
-            int r = GetRandomNumber(0,boneClone.Length);
+            int index = GetRandomNumber(0,left.Length);
+            int r = left[index];
+            currentIndex = r;
+            Debug.Log(r);
             current = boneClone[r];
             current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             currentBoneName.text = boneName[r];
