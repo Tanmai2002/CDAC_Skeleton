@@ -27,6 +27,7 @@ public class BonePlacement : MonoBehaviour
     private int []done = {};
 
     private int currentIndex;
+    private HaddiScript haddi;
     
 
     void Start()
@@ -39,6 +40,7 @@ public class BonePlacement : MonoBehaviour
             BoneDragScript bs = boneClone[i].GetComponentInChildren<BoneDragScript>();
             bs.enabled = false;
         }
+        haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
     }
 
     private static readonly Random getrandom = new Random();
@@ -51,6 +53,7 @@ public class BonePlacement : MonoBehaviour
     }
 
     public void next(){
+        haddi.values.Add("Correct Answer is "+quizM.question.answer);
          current.GetComponentInChildren<SpriteRenderer>().color = Color.white;
          current=null;
         state = true;
@@ -63,12 +66,21 @@ public class BonePlacement : MonoBehaviour
         makeDone();
     }
 
+    public void wrongAnswer(){
+        haddi.values.Add("Wrong Answer");
+        next();
+    }
+    
+
     public void makeDone(){
         done = done.Concat(new int[] {currentIndex}).ToArray();
         left = left.Where(val => val != currentIndex).ToArray();
 
         boneClone[currentIndex].GetComponentInChildren<SpriteRenderer>().color = Color.green;
 
+        if(left.Length==0){
+            Debug.Log("Game Complete");
+        }
     }
 
     void Update(){
@@ -76,7 +88,6 @@ public class BonePlacement : MonoBehaviour
             int index = GetRandomNumber(0,left.Length);
             int r = left[index];
             currentIndex = r;
-            Debug.Log(r);
             current = boneClone[r];
             current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             currentBoneName.text = boneName[r];

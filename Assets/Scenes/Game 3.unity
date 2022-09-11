@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb5ff711852fed41b031fdbbda67e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMinutes: 0
+  startMinutes: 5
   currentTimeText: {fileID: 1561673548}
 --- !u!224 &179908781 stripped
 RectTransform:

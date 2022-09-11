@@ -25,6 +25,7 @@ public class QuizManager : MonoBehaviour
 
     public BonePlacement bonePlacement;
 
+
     private void Awake()
     {
         if(instance == null){
@@ -94,6 +95,7 @@ public class QuizManager : MonoBehaviour
             }
             else {
                 Debug.Log("Wrong Answer");
+                bonePlacement.wrongAnswer();
             }
         }
     }
