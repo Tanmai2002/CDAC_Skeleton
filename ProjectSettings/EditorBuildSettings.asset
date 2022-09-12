@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game 3.unity
     guid: 414446be83bc9754f9be389c787ea091
+  - enabled: 1
+    path: Assets/Scenes/Quit pop-up.unity
+    guid: 8c1033b5806832b48b106cc4d8ec7981
+  - enabled: 1
+    path: Assets/Scenes/Settings pop-up.unity
+    guid: 9b8bf7ee512ac6347839c03713b7e792
   m_configObjects: {}

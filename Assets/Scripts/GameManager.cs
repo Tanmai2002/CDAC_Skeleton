@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -68,4 +69,6 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         haddi.values.Add("Congratulations!!! You have Completed the Game");
         Invoke("GoToHomePage",5);
     }
+
+
 }

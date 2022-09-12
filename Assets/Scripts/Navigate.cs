@@ -18,4 +18,10 @@ public class Navigate : MonoBehaviour
     public void BackHome(){
         SceneManager.LoadScene(0);
     }
+    public void Quit(){
+        SceneManager.LoadScene(4);
+    }
+     public void Settings(){
+        SceneManager.LoadScene(5);
+    }
 }
