@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
         currentSound.source.Pause();
     }
     public void resume(){
-             currentSound.source.UnPause();
+        currentSound.source.UnPause();
     }
 
     void stopCurrent(){

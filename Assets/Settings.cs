@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Popup : MonoBehaviour
+
+public class Settings : MonoBehaviour
 {
+    [SerializeField] GameObject popup;
 
-    [SerializeField] Button _btn1;
-    [SerializeField] Button _btn2;
-    [SerializeField] Text _popText;
-
+    public void Popup()
+    {
+        popup.SetActive(true);
+        FindObjectOfType<Timer>().StopTimer();
+    }
     // Start is called before the first frame update
     void Start()
     {
