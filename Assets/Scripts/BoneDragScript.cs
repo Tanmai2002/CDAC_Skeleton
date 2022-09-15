@@ -11,7 +11,7 @@ public class BoneDragScript : MonoBehaviour
     [SerializeField]
     bool DebugMode=false;
     
-    HaddiScript haddi;
+    // HaddiScript haddi;
 
     Dictionary < string, string > boneHints = new Dictionary < string, string > (){
         {"Pelvis", "Basin-shaped complex of bones that connects the trunk and the legs"},
@@ -54,7 +54,7 @@ public class BoneDragScript : MonoBehaviour
         isFixed=false;
         initialPosition=transform.position;
         bonePosManager=FindObjectOfType<SceneBonePosManager>().GetComponent<SceneBonePosManager>();
-        haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
+        // haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
     }
 
     // Update is called once per frame
@@ -89,7 +89,7 @@ public class BoneDragScript : MonoBehaviour
                 isFixed=true;
             }else{
                 myParent.position=initialPosition;
-                haddi.values.Add(boneHints[thisBone.ToString()]);
+                HaddiScript.instance.values.Add(boneHints[thisBone.ToString()]);
             }
         }
 }

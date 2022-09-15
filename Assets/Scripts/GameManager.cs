@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public HaddiScript haddi;
     private Scene scene;
+    public Timer timer;
 
     public static GameManager instance;
     
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     // Always clean up your listeners when not needed anymore
     SceneManager.sceneLoaded -= OnSceneLoaded;
     haddi=null;
+    timer=null;
 }
 
 // Listener for sceneLoaded
@@ -49,7 +51,7 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     if(scene.buildIndex==0)
     return;
     
-
+    timer=FindObjectOfType<Timer>().GetComponent<Timer>();
     haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
   
 

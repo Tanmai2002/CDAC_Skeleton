@@ -7,6 +7,7 @@ public class HaddiScript : MonoBehaviour
 {
     [SerializeField]
     MeshRenderer renderer;
+    public static HaddiScript instance;
     TextAnimator textanim;
 
     // [SerializeField]
@@ -19,7 +20,7 @@ public class HaddiScript : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
-    Timer myTimer;
+    
 
     bool canGoNext;
     bool isFirstTime = true;
@@ -30,8 +31,8 @@ public class HaddiScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance=this;
         textanim=GetComponent<TextAnimator>();
-        myTimer = FindObjectOfType<Timer>().GetComponent<Timer>();
         animator=GetComponent<Animator>();
         canGoNext=true;
     
@@ -40,9 +41,6 @@ public class HaddiScript : MonoBehaviour
         animator.SetInteger("dialogCount",values.Count);
     }
 
-//    void resetCanGo(){
-//     canGoNext=true;
-//    }
    void setFalseTextExit(){
             animator.SetBool("textExit",false);
             textanim.addTextToAnimate(values[0]);
@@ -67,7 +65,7 @@ public class HaddiScript : MonoBehaviour
             Invoke("MakeItZero",0.5f);
             AudioManager.instance.stopForeground();
             if(isFirstTime){
-                myTimer.StartTimer();
+                GameManager.instance.timer.StartTimer();
                 isFirstTime=false;
             }
             
@@ -91,7 +89,7 @@ public class HaddiScript : MonoBehaviour
             animator.SetBool("textExit",true);
             if(values.Count<=0){
             if(isFirstTime){
-                myTimer.StartTimer();
+                GameManager.instance.timer.StartTimer();
                 isFirstTime=false;
             }
                 
