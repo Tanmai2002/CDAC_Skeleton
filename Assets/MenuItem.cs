@@ -54,6 +54,10 @@ public class MenuItem : MonoBehaviour
 
     public void Hints() 
     {
+        if(!HaddiScript.instance.enabled){
+            HaddiScript.instance.values.Clear();
+        }
+        HaddiScript.instance.enabled=!HaddiScript.instance.enabled;
         Debug.Log("Hints");
     }
 

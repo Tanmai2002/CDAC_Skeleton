@@ -6,7 +6,7 @@ using TMPro;
 public class HaddiScript : MonoBehaviour
 {
     [SerializeField]
-    MeshRenderer renderer;
+    new MeshRenderer renderer;
     public static HaddiScript instance;
     TextAnimator textanim;
 

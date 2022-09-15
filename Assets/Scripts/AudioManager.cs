@@ -53,9 +53,9 @@ public class AudioManager : MonoBehaviour
 
     public void playForeground(string name){
         lowerMainVolume();
-        Sounds s = Array.Find(sounds, sound => sound.name == name);
-        forgroundMusic=s;
-        s.source.Play();
+        // Sounds s = Array.Find(sounds, sound => sound.name == name);
+        // forgroundMusic=s;
+        // s.source.Play();
 
 
     }
@@ -64,8 +64,8 @@ public class AudioManager : MonoBehaviour
         if(forgroundMusic==null)
         return;
         normalizeMainVolume();
-        forgroundMusic.source.Stop();
-        forgroundMusic=null;
+        // forgroundMusic.source.Stop();
+        // forgroundMusic=null;
         
 
     }
