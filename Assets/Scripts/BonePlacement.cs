@@ -70,9 +70,9 @@ public class BonePlacement : MonoBehaviour
         haddi.values.Add("Wrong Answer");
         next();
     }
-    
 
     public void makeDone(){
+
         done = done.Concat(new int[] {currentIndex}).ToArray();
         left = left.Where(val => val != currentIndex).ToArray();
 
@@ -84,10 +84,11 @@ public class BonePlacement : MonoBehaviour
     }
 
     void Update(){
-        if(state){
-            int index = GetRandomNumber(0,left.Length);
+        if(state && left.Length>0){
+            int index = GetRandomNumber(0,left.Length-1);
             int r = left[index];
             currentIndex = r;
+
             current = boneClone[r];
             current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             currentBoneName.text = boneName[r];
