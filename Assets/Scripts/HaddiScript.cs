@@ -7,6 +7,7 @@ public class HaddiScript : MonoBehaviour
 {
     [SerializeField]
     MeshRenderer renderer;
+    public static HaddiScript instance;
     TextAnimator textanim;
 
     // [SerializeField]
@@ -19,21 +20,19 @@ public class HaddiScript : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
-    Timer myTimer;
+    
 
     bool canGoNext;
     bool isFirstTime = true;
     Animator animator;
 
-[SerializeField]
-    AudioManager aumanager;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        instance=this;
         textanim=GetComponent<TextAnimator>();
-        myTimer = FindObjectOfType<Timer>().GetComponent<Timer>();
-        aumanager=FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
         animator=GetComponent<Animator>();
         canGoNext=true;
     
@@ -42,9 +41,6 @@ public class HaddiScript : MonoBehaviour
         animator.SetInteger("dialogCount",values.Count);
     }
 
-//    void resetCanGo(){
-//     canGoNext=true;
-//    }
    void setFalseTextExit(){
             animator.SetBool("textExit",false);
             textanim.addTextToAnimate(values[0]);
@@ -67,17 +63,17 @@ public class HaddiScript : MonoBehaviour
         
         if(values.Count<=0){
             Invoke("MakeItZero",0.5f);
-            aumanager.stopForeground();
+            AudioManager.instance.stopForeground();
             if(isFirstTime){
-                myTimer.StartTimer();
+                GameManager.instance.timer.StartTimer();
                 isFirstTime=false;
             }
             
             return;
         }
         if(values.Count>0 && spriteRenderer.enabled==false){
-            if(aumanager!=null){
-                aumanager.playForeground("haddi1");
+            if(AudioManager.instance!=null){
+                AudioManager.instance.playForeground("haddi1");
             }
             textanim.addTextToAnimate(values[0]);
             // text.SetText(values[0]);
@@ -93,7 +89,7 @@ public class HaddiScript : MonoBehaviour
             animator.SetBool("textExit",true);
             if(values.Count<=0){
             if(isFirstTime){
-                myTimer.StartTimer();
+                GameManager.instance.timer.StartTimer();
                 isFirstTime=false;
             }
                 

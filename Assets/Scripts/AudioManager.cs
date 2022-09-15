@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public Sounds[] sounds;
     public static AudioManager instance;
     Sounds currentSound,forgroundMusic;
+    public bool isSoundOn=true;
 
     void Awake()
     {
@@ -79,9 +80,11 @@ public class AudioManager : MonoBehaviour
 
     public void pause(){
         currentSound.source.Pause();
+        isSoundOn=false;
     }
     public void resume(){
         currentSound.source.UnPause();
+        isSoundOn=true;
     }
 
     void stopCurrent(){

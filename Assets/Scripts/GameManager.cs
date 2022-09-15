@@ -7,8 +7,9 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    public HaddiScript haddi;
+    // public HaddiScript haddi;
     private Scene scene;
+    public Timer timer;
 
     public static GameManager instance;
     
@@ -39,7 +40,8 @@ public class GameManager : MonoBehaviour
 {
     // Always clean up your listeners when not needed anymore
     SceneManager.sceneLoaded -= OnSceneLoaded;
-    haddi=null;
+    // haddi=null;
+    timer=null;
 }
 
 // Listener for sceneLoaded
@@ -49,8 +51,8 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     if(scene.buildIndex==0)
     return;
     
-
-    haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
+    timer=FindObjectOfType<Timer>().GetComponent<Timer>();
+    // haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
   
 
     // do your "Start" stuff here
@@ -59,7 +61,7 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     
     public void timerEnded(){
         Debug.Log("Timer Ended");
-        haddi.values.Add("Sorry The Timer Has Ended");
+        HaddiScript.instance.values.Add("Sorry The Timer Has Ended");
 
     }
     void GoToHomePage(){
@@ -67,7 +69,7 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     }
     public void GameComplete(){
         Debug.Log("Timer Ended");
-        haddi.values.Add("Congratulations!!! You have Completed the Game");
+        HaddiScript.instance.values.Add("Congratulations!!! You have Completed the Game");
         Invoke("GoToHomePage",5);
     }
 

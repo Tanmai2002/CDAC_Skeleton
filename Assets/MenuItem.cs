@@ -13,12 +13,12 @@ public class MenuItem : MonoBehaviour
     [SerializeField] Sprite icon1;
     [SerializeField] Sprite icon2;
     [SerializeField] SpriteRenderer icon;
+    
 
-    private bool Soundon=true;
 
     public void Sound()
     {
-        if (Soundon == true)
+        if (AudioManager.instance.isSoundOn)
         {
             AudioManager.instance.pause();
             icon.sprite = icon2;
@@ -31,8 +31,7 @@ public class MenuItem : MonoBehaviour
             icon.sprite = icon1;
             text.SetText("Sound Off");
         }
-        Soundon = !Soundon;
-        Debug.Log("Sound");
+        Debug.Log(AudioManager.instance.isSoundOn);
     }
     
     public void Resume()
@@ -70,6 +69,20 @@ public class MenuItem : MonoBehaviour
     void Start()
     {
         _Text1.sortingOrder = 13;
+        if(functionName=="Sound"){
+            if (AudioManager.instance.isSoundOn)
+        {
+            icon.sprite = icon1;
+            text.SetText("Sound Off");
+
+        }
+        else
+        {
+            icon.sprite = icon2;
+            text.SetText("Sound On");
+        }
+        }
+        
     }
 
     // Update is called once per frame
