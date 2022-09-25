@@ -54,13 +54,17 @@ public class BonePlacement : MonoBehaviour
 
     public void next(){
         haddi.values.Add("Correct Answer is "+quizM.question.answer);
-         current.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+          foreach(SpriteRenderer t in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
+        t.color=Color.white;
+       }
          current=null;
         state = true;
     }
 
     public void correctAnswer(){
-        current.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+         foreach(SpriteRenderer t in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
+        t.color=Color.white;
+       }
          current=null;
         state = true;
         makeDone();
@@ -76,7 +80,9 @@ public class BonePlacement : MonoBehaviour
         done = done.Concat(new int[] {currentIndex}).ToArray();
         left = left.Where(val => val != currentIndex).ToArray();
 
-        boneClone[currentIndex].GetComponentInChildren<SpriteRenderer>().color = Color.green;
+       foreach(SpriteRenderer r in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
+        r.color=Color.green;
+       }
 
         if(left.Length==0){
             Debug.Log("Game Complete");
@@ -90,7 +96,9 @@ public class BonePlacement : MonoBehaviour
             currentIndex = r;
 
             current = boneClone[r];
-            current.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            foreach(SpriteRenderer t in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
+        t.color=Color.red;
+       }
             currentBoneName.text = boneName[r];
             quizM.question.answer = boneName[r];
             quizM.SetQuestion();
