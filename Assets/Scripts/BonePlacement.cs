@@ -27,8 +27,6 @@ public class BonePlacement : MonoBehaviour
     private int []done = {};
 
     private int currentIndex;
-    private HaddiScript haddi;
-    
 
     void Start()
     {
@@ -40,7 +38,6 @@ public class BonePlacement : MonoBehaviour
             BoneDragScript bs = boneClone[i].GetComponentInChildren<BoneDragScript>();
             bs.enabled = false;
         }
-        haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
     }
 
     private static readonly Random getrandom = new Random();
@@ -53,7 +50,10 @@ public class BonePlacement : MonoBehaviour
     }
 
     public void next(){
-        haddi.values.Add("Correct Answer is "+quizM.question.answer);
+        if(HaddiScript.instance.spriteRenderer.enabled){
+            return;
+        }
+        HaddiScript.instance.values.Add("Correct Answer is "+quizM.question.answer);
           foreach(SpriteRenderer t in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
         t.color=Color.white;
        }
@@ -71,7 +71,7 @@ public class BonePlacement : MonoBehaviour
     }
 
     public void wrongAnswer(){
-        haddi.values.Add("Wrong Answer");
+        HaddiScript.instance.values.Add("Wrong Answer");
         next();
     }
 

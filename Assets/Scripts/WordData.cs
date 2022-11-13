@@ -18,7 +18,11 @@ public class WordData : MonoBehaviour
         buttonObj = GetComponent<Button>();
 
         if(buttonObj){
-            buttonObj.onClick.AddListener(() => CharSelected());
+            buttonObj.onClick.AddListener(()=>{
+                if(HaddiScript.instance.values.Count<=0){
+                    CharSelected();
+                }
+            });
         }
     } 
 

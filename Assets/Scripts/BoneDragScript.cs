@@ -47,11 +47,13 @@ public class BoneDragScript : MonoBehaviour
     [SerializeField]
     bones thisBone;
     bool choose=true,drop=false;
+    bool isHaddiOn;
     SceneBonePosManager bonePosManager;
     Vector3 initialPosition;
     void Start()
     {
         isFixed=false;
+        isHaddiOn=false;
         initialPosition=transform.position;
         bonePosManager=FindObjectOfType<SceneBonePosManager>().GetComponent<SceneBonePosManager>();
         // haddi=FindObjectOfType<HaddiScript>().GetComponent<HaddiScript>();
@@ -64,12 +66,16 @@ public class BoneDragScript : MonoBehaviour
                  myParent.position=Camera.main.ScreenToWorldPoint(Input.mousePosition+new Vector3(0,0,10));
        
         }   
+         isHaddiOn=HaddiScript.instance.values.Count>0;
     }
 
 
     void OnMouseDown(){
     Debug.Log("Sprite Clicked");
     if(isFixed && !DebugMode){
+        return;
+    }
+    if(isHaddiOn){
         return;
     }
      if(choose){

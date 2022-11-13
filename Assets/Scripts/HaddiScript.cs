@@ -18,7 +18,7 @@ public class HaddiScript : MonoBehaviour
     [SerializeField]
     GameObject textfield;
     [SerializeField]
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     
 
@@ -50,7 +50,8 @@ public class HaddiScript : MonoBehaviour
    }
    void MakeItZero(){
     spriteRenderer.enabled=false;
-            textfield.SetActive(false);
+    textfield.SetActive(false);
+    
 
    }
     void Update()
