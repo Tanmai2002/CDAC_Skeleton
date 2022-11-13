@@ -21,6 +21,9 @@ public class Navigate : MonoBehaviour
     public void Quit(){
         SceneManager.LoadScene(4);
     }
+    public void QuitGame(){
+        Application.Quit();
+    }
      public void Settings(){
         SceneManager.LoadScene(5);
     }

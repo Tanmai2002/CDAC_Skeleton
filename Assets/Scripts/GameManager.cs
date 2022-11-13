@@ -74,6 +74,4 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     }
 
 
-
-
 }
