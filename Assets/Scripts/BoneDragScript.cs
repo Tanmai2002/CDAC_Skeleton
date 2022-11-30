@@ -36,7 +36,7 @@ public class BoneDragScript : MonoBehaviour
         {"Radius_Right","The outer of the two bones of the forearm"},
         {"Vertebrate_Column","Known as Backbone or Spine"},
         {"Rib_Center","Partially T-shaped vertical bone that forms the anterior portion of the chest wall centrally"},
-        {"RibCage","Surrounds the lungs and the heart, serving as an important means of bony protection for these vital organs"},
+        {"RibCage","Surrounds and protects the lungs and the heart"},
         {"Foot_Left","Human foot consists of 26 bones that connect the foot to the leg"},
         {"Foot_Right","Human foot consists of 26 bones that connect the foot to the leg"}
     };
