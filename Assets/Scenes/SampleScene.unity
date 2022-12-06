@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3043,6 +3043,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 448820602}
     m_Modifications:
+    - target: {fileID: 5677527943880713589, guid: 1274b87dc8e51734a9177b35805351b3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8116226359309167815, guid: 1274b87dc8e51734a9177b35805351b3, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -3157,6 +3161,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5051353499592673991, guid: 8250a1cefabbb144f9601aab2acd4ccc, type: 3}
+      propertyPath: icon1
+      value: 
+      objectReference: {fileID: 21300000, guid: a8bf463d0bcbdd440b693618eccf4027, type: 3}
+    - target: {fileID: 5051353499592673991, guid: 8250a1cefabbb144f9601aab2acd4ccc, type: 3}
+      propertyPath: icon2
+      value: 
+      objectReference: {fileID: 21300000, guid: 321dfcc1c12d7cf42b0037754b1cdf9b, type: 3}
     - target: {fileID: 5051353500185610347, guid: 8250a1cefabbb144f9601aab2acd4ccc, type: 3}
       propertyPath: m_Name
       value: Menu
