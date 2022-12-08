@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugMode: 0
+  myrenderer:
+  - {fileID: 9029766440245668734}
   myParent: {fileID: 5524748661721826610}
   thisBone: 0
 --- !u!58 &5462687517497962590

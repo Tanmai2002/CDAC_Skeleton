@@ -10,6 +10,8 @@ public class BoneDragScript : MonoBehaviour
     bool isFixed;
     [SerializeField]
     bool DebugMode=false;
+    [SerializeField]
+    SpriteRenderer[] myrenderer;
     
     // HaddiScript haddi;
 
@@ -90,6 +92,11 @@ public class BoneDragScript : MonoBehaviour
             // Debug.Log(Vector3.Distance(transform.position,finalPos));
             if(Vector3.Distance(transform.position,finalPos)<0.5){
                 myParent.position=finalPos;
+               foreach(SpriteRenderer r in myrenderer){
+                 r.color=Color.white;
+               }
+
+
                 bonePosManager.checkIfGameComplete();
                 
                 isFixed=true;
