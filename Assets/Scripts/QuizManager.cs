@@ -80,13 +80,16 @@ public class QuizManager : MonoBehaviour
 
         if(currentAnswerIndex >= question.answer.Length){
             correctAnswer = true;
+            int counter=0;
 
             for(int i = 0;i<question.answer.Length;i++){
 
                 if(char.ToUpper(question.answer[i]) != char.ToUpper(answerWordArray[i].charValue)){
                     correctAnswer = false;
                     break;
+
                 }
+                counter++;
             }
 
             if(correctAnswer){
@@ -95,7 +98,7 @@ public class QuizManager : MonoBehaviour
             }
             else {
                 Debug.Log("Wrong Answer");
-                bonePlacement.wrongAnswer();
+                bonePlacement.wrongAnswer((counter>=question.answer.Length/2));
             }
         }
     }

@@ -18,6 +18,7 @@ public class BonePlacement : MonoBehaviour
     private bool state = true;
 
     public QuizManager quizM;
+    public bool tryAgain=true;
 
     public Text currentBoneName;
     private string []boneName = {"Skull","RibCage","Femur","Femur","Clavical","Clavical","Finger","Finger","Foot","Foot","Humerus","Humerus","Sternum","Ulna","Ulna","Vertebrate","Pelvis","Tibia","Tibia","Scapula","Scapula","Patella","Patella"};
@@ -31,6 +32,7 @@ public class BonePlacement : MonoBehaviour
     void Start()
     {
         boneHolder = silouette.GetComponentsInChildren<Transform>();
+        tryAgain=true;
         
         boneClone = new GameObject[bone.Length];
         for(int i=0;i<bone.Length;i++){
@@ -50,9 +52,11 @@ public class BonePlacement : MonoBehaviour
     }
 
     public void next(){
+        
         if(HaddiScript.instance.spriteRenderer.enabled){
             return;
         }
+        tryAgain=true;
         HaddiScript.instance.values.Add("Correct Answer is "+quizM.question.answer);
           foreach(SpriteRenderer t in boneClone[currentIndex].GetComponentsInChildren<SpriteRenderer>() ){
         t.color=Color.white;
@@ -70,7 +74,12 @@ public class BonePlacement : MonoBehaviour
         makeDone();
     }
 
-    public void wrongAnswer(){
+    public void wrongAnswer(bool almostCorrect){
+        if(tryAgain && almostCorrect){
+        HaddiScript.instance.values.Add("You are very close!! Try again");
+        tryAgain=false;
+        return;
+        }
         HaddiScript.instance.values.Add("Wrong Answer");
         next();
     }
