@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2516b08ab1bcc41a74cf1bfb418224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boneColor: {r: 0.9528302, g: 0.29124242, b: 0.29124242, a: 1}
+  boneColor: {r: 0.9056604, g: 0.7552815, b: 0.4989676, a: 1}
 --- !u!4 &473600492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2103482285366657397, guid: 854a17d43138b03489848ceba0da797f, type: 3}
