@@ -56,9 +56,16 @@ public class MenuItem : MonoBehaviour
     {
         if(!HaddiScript.instance.enabled){
             HaddiScript.instance.values.Clear();
+                icon.sprite = icon1;
+                
+            text.SetText("Hints On");
+        }else{
+icon.sprite = icon2;
+
+            text.SetText("Hints Off");
         }
         HaddiScript.instance.enabled=!HaddiScript.instance.enabled;
-        Debug.Log("Hints");
+        Debug.Log("Hints Off");
     }
 
      public void MainMenu() 

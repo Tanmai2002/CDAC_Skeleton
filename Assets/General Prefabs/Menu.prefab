@@ -247,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6599998
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43999994
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -384,6 +384,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1273478046597627953, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
+      propertyPath: icon1
+      value: 
+      objectReference: {fileID: 21300000, guid: fa7f57df2d2233d4baa59b2cd952eb83, type: 3}
+    - target: {fileID: 1273478046597627953, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
+      propertyPath: icon2
+      value: 
+      objectReference: {fileID: 21300000, guid: 321dfcc1c12d7cf42b0037754b1cdf9b, type: 3}
     - target: {fileID: 1273478046597627953, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: functionName
       value: Hints
@@ -449,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.81
+      value: -3.3300002
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046597627952, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -585,6 +593,10 @@ PrefabInstance:
     - target: {fileID: 1273478046597627955, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_Name
       value: Help
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273478046597627955, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1273478046613653667, guid: f574fac6e73a94c41a83ec95a3753fcb, type: 3}
       propertyPath: m_text
