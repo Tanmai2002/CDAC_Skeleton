@@ -6422,6 +6422,10 @@ PrefabInstance:
       propertyPath: values.Array.data[4]
       value: Good Luck.
       objectReference: {fileID: 0}
+    - target: {fileID: 5244675784466739507, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
+      propertyPath: delayTime
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 7017416912237569447, guid: 76fc38cef0e196e4ea8d2ce9ea1e680e, type: 3}
       propertyPath: m_fontColor.b
       value: 0

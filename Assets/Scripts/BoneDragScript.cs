@@ -12,6 +12,8 @@ public class BoneDragScript : MonoBehaviour
     bool DebugMode=false;
     [SerializeField]
     SpriteRenderer[] myrenderer;
+    [SerializeField]
+    Animator animController;
     
     // HaddiScript haddi;
 
@@ -69,6 +71,20 @@ public class BoneDragScript : MonoBehaviour
        
         }   
          isHaddiOn=HaddiScript.instance.values.Count>0;
+        if(drop ){
+            animController.SetBool("isHovered",false);
+        }
+        
+    }
+    private void OnMouseEnter() {
+        if(choose && !isFixed){
+            animController.SetBool("isHovered",true);
+        }
+    }
+    private void OnMouseExit() {
+        if(choose){
+            animController.SetBool("isHovered",false);
+        }
     }
 
 
