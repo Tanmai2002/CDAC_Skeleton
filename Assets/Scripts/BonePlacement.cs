@@ -95,6 +95,7 @@ public class BonePlacement : MonoBehaviour
 
         if(left.Length==0){
             Debug.Log("Game Complete");
+            GameManager.instance.GameComplete();
         }
     }
 

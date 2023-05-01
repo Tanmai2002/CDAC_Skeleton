@@ -11,6 +11,7 @@ public class SceneBonePosManager : MonoBehaviour
     Dictionary<string,Transform> bonePositions;
     void Start()
     {
+            boneCorrectCount=0;
         bonePositions=new Dictionary<string, Transform>();
         foreach(Transform t in Holder.GetComponentsInChildren<Transform>()){
             if(t.gameObject.name.ToString()=="Positioner")
@@ -37,7 +38,7 @@ public class SceneBonePosManager : MonoBehaviour
         Debug.Log(boneCorrectCount);
         if(boneCorrectCount==bonePositions.Count){
             GameManager.instance.GameComplete();
+            boneCorrectCount=0;
         }
-
     }
 }

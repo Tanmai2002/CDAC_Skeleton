@@ -62,7 +62,7 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     public void timerEnded(){
         Debug.Log("Timer Ended");
         HaddiScript.instance.values.Add("Sorry The Timer Has Ended");
-
+        Invoke("GoToHomePage",5);
     }
     void GoToHomePage(){
         SceneManager.LoadScene(0);
